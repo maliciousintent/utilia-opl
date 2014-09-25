@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><title>UTilia - Psychology for People and the Organization</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css"><style type="text/css">@import url("//fonts.googleapis.com/css?family=Open+Sans:400+600");
+.open-sans,
+html,
+body,
+.main form * {
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+.spacer-5 {
+  height: 5px;
+}
+.spacer-10 {
+  height: 10px;
+}
+.spacer-20 {
+  height: 20px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  width: 400px;
+}
+header img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.center {
+  text-align: center;
+}
+.main form label {
+  font-weight: 600;
+}
+.main form label.pure-checkbox {
+  font-weight: 400;
+}
+.main form input[type='text'],
+.main form input[type='email'] {
+  display: block;
+  width: 100%;
+}
+.main form input[type='text']:focus,
+.main form input[type='email']:focus {
+  border-color: #999;
+}
+.main form button {
+  color: #fff;
+  background: #2980b9;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+}
+.main form button span {
+  font-weight: 600;
+}
+footer {
+  color: #777;
+}
+</style></head><body><div class="container"><div class="spacer-10"></div><header><img src="Utilia-HR-Tools-and-Solutions-logo.jpg"></header><div class="spacer-20"></div><div class="main"><form id="utilia-form" method="POST" name="utilia-form" class="pure-form pure-form-stacked"><fieldset><label for="nome">Nome</label><input id="nome" name="nome" type="text" placeholder="Nome" required><div class="spacer-10"></div><label for="cognome">Cognome</label><input id="cognome" name="cognome" type="text" placeholder="Cognome" required><div class="spacer-10"></div><label for="email">Indirizzo e-mail</label><input id="email" name="email" type="text" placeholder="Indirizzo e-mail" required><div class="spacer-10"></div><label>Tools</label><label for="tool-1" class="pure-checkbox"><input id="tool-1" name="tool-1" type="checkbox">&nbsp;Tool 1</label><label for="tool-2" class="pure-checkbox"><input id="tool-2" name="tool-2" type="checkbox">&nbsp;Tool 2</label><div class="spacer-20"></div><div class="center"><button type="submit"><span>Invia</span></button></div></fieldset></form></div><div class="spacer-10"></div><footer class="center"><small>UTilia - Psychology for People and the Organization</small></footer></div><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>$(function () {
+
+  $('#utilia-form').submit(function() {
+    var form = $(this);
+    var requireds = $('input[required]', $(form)).length;
+    var notempties = 0;
+    $('input[required]', $(form)).each(function(a, b) {
+      if ($(b).val().trim().length !== 0) {
+        notempties += 1;
+      }
+    });
+    if (notempties !== requireds) {
+      return false;
+    }
+    alert('ok');
+  });
+
+});</script></body></html>

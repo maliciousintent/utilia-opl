@@ -1,0 +1,130 @@
+doctype html
+html
+  head
+    title UTilia - Psychology for People and the Organization
+    
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
+    style(type='text/css')
+      :stylus
+        @import url('//fonts.googleapis.com/css?family=Open+Sans:400+600');
+
+        .open-sans
+          font-family 'Open Sans'
+          font-weight 400
+
+        _spacer = 5, 10, 20
+
+        for _val in _spacer
+          .spacer-{ _val }
+            height ( _val * 1px )
+
+        html,
+        body
+          margin 0
+          padding 0
+          @extends .open-sans
+
+        .container
+          margin 0 auto
+          width 400px
+
+        header
+          img
+            max-width 100%
+            width 100%
+            height auto
+
+        .center
+          text-align center
+        
+        .main
+          form
+            *
+              @extends .open-sans
+            label
+              font-weight 600
+              &.pure-checkbox
+                font-weight 400
+            input[type='text'],
+            input[type='email']
+              display block
+              width 100%
+              &:focus
+                border-color #999
+            button
+              color #fff
+              background #2980b9
+              border none
+              padding 10px 30px
+              border-radius 4px
+              span
+                font-weight 600
+
+        footer
+          color #777
+
+  body
+
+    .container
+      .spacer-10
+      header
+        img(src='Utilia-HR-Tools-and-Solutions-logo.jpg')
+      .spacer-20
+      .main
+        form#utilia-form.pure-form.pure-form-stacked(method='POST', name='utilia-form')
+          fieldset
+            
+            label(for='nome') Nome
+            input#nome(name='nome', type='text', placeholder='Nome', required)
+
+            .spacer-10
+
+            label(for='cognome') Cognome
+            input#cognome(name='cognome', type='text', placeholder='Cognome', required)    
+
+            .spacer-10
+
+            label(for='email') Indirizzo e-mail
+            input#email(name='email', type='text', placeholder='Indirizzo e-mail', required)
+
+            .spacer-10
+            label Tools
+
+            - var tools = [{'name': 'Tool 1', field: 'tool-1'}, {'name': 'Tool 2', field: 'tool-2'}];
+
+            each tool in tools
+              label.pure-checkbox(for='#{tool.field}')
+                input(id='#{tool.field}', name='#{tool.field}', type='checkbox')
+                | &nbsp;#{tool.name}
+
+            .spacer-20
+
+            .center
+              button(type='submit')
+                span Invia
+      .spacer-10
+      footer.center
+        small UTilia - Psychology for People and the Organization
+
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script.
+      $(function () {
+
+        $('#utilia-form').submit(function() {
+          var form = $(this);
+          var requireds = $('input[required]', $(form)).length;
+          var notempties = 0;
+          $('input[required]', $(form)).each(function(a, b) {
+            if ($(b).val().trim().length !== 0) {
+              notempties += 1;
+            }
+          });
+          if (notempties !== requireds) {
+            return false;
+          }
+          alert('ok');
+        });
+
+      });
