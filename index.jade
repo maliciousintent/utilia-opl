@@ -32,14 +32,18 @@ html
 
         header
           img
-            max-width 100%
-            width 100%
+            max-width 50%
+            width 50%
             height auto
+            border none
 
         .center
           text-align center
         
         .main
+          p
+            font-size 90%
+          .spacer-5
           form
             *
               @extends .open-sans
@@ -69,10 +73,12 @@ html
 
     .container
       .spacer-10
-      header
+      header.center
         img(src='Utilia-HR-Tools-and-Solutions-logo.jpg')
       .spacer-20
       .main
+        p.center Compila il modulo seguente per ricevere via e-mail i report.
+        .spacer-10
         form#utilia-form.pure-form.pure-form-stacked(method='POST', name='utilia-form')
           fieldset
             
@@ -103,7 +109,7 @@ html
 
             .center
               button(type='submit')
-                span Invia
+                span Invia richiesta
       .spacer-10
       footer.center
         small UTilia - Psychology for People and the Organization
