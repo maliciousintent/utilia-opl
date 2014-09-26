@@ -72,7 +72,7 @@ html
   body
 
     .container
-      .spacer-10
+      .spacer-20
       header.center
         img(src='Utilia-HR-Tools-and-Solutions-logo.jpg')
       .spacer-20
@@ -98,7 +98,7 @@ html
             .spacer-10
             label Tools
 
-            - var tools = [{'name': 'Tool 1', field: 'tool-1'}, {'name': 'Tool 2', field: 'tool-2'}];
+            - var tools = [{'name': 'Aptitude', 'field': 'aptitude'}, {'name': 'Wave Focus Styles', 'field': 'wave-focus-styles'}, {'name': 'Wave Professional Styles', 'field': 'wave-professional-styles'}, {'name': 'Wave Work Strengths', 'field': 'wave-work-strengths'}, {'name': 'Flora', 'field': 'flora'}, {'name': 'DiSC', 'field': 'disc'}, {'name': 'MyDrive', 'field': 'mydrive'}, {'name': 'VALues', 'field': 'values'}, {'name': 'Utopia', 'field': 'utopia'}, {'name': 'HighLight', 'field': 'highlight'}, {'name': 'Feedback 360°', 'field': 'feedback-360'}, {'name': 'Performance 360°', 'field': 'performance-360'}, {'name': 'Job Profiler', 'field': 'job-profiler'}];
 
             each tool in tools
               label.pure-checkbox(for='#{tool.field}')
@@ -113,6 +113,7 @@ html
       .spacer-10
       footer.center
         small UTilia - Psychology for People and the Organization
+      .spacer-20
 
     script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
     script.
