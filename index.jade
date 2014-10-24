@@ -79,7 +79,7 @@ html
       .main
         p.center Compila il modulo seguente per ricevere via e-mail i report.
         .spacer-10
-        form#utilia-form.pure-form.pure-form-stacked(method='POST', name='utilia-form')
+        form#utilia-form.pure-form.pure-form-stacked(method='POST', name='utilia-form', action='https://www.youform.me/api/form/b80098f7-70ab-4ea1-89d1-9bcf37c447c9')
           fieldset
             
             label(for='nome') Nome
@@ -131,7 +131,6 @@ html
           if (notempties !== requireds) {
             return false;
           }
-          alert('ok');
         });
 
       });

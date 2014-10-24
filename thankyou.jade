@@ -1,0 +1,88 @@
+doctype html
+html
+  head
+    title UTilia - Psychology for People and the Organization
+    
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css')
+    style(type='text/css')
+      :stylus
+        @import url('//fonts.googleapis.com/css?family=Open+Sans:400+600');
+
+        .open-sans
+          font-family 'Open Sans'
+          font-weight 400
+
+        _spacer = 5, 10, 20
+
+        for _val in _spacer
+          .spacer-{ _val }
+            height ( _val * 1px )
+
+        html,
+        body
+          margin 0
+          padding 0
+          @extends .open-sans
+
+        .container
+          margin 0 auto
+          width 400px
+
+        header
+          img
+            max-width 50%
+            width 50%
+            height auto
+            border none
+
+        .center
+          text-align center
+        
+        .main
+          h3,
+          h4
+            color #999
+            font-weight 300
+          a
+            color #2980b9
+          p
+            font-size 90%
+          form
+            *
+              @extends .open-sans
+            label
+              font-weight 600
+              &.pure-checkbox
+                font-weight 400
+            input[type='text'],
+            input[type='email']
+              display block
+              width 100%
+              &:focus
+                border-color #999
+            button
+              color #fff
+              background #2980b9
+              border none
+              padding 10px 30px
+              border-radius 4px
+              span
+                font-weight 600
+
+        footer
+          color #777
+
+  body
+
+    .container
+      .spacer-20
+      header.center
+        img(src='Utilia-HR-Tools-and-Solutions-logo.jpg')
+      .spacer-20
+      .main
+        h3.center Grazie per aver compilato il questionario!
+        h4.center Verrai ricontattato a breve
+        p.center
+          a(href='index.html') Torna al questionario
