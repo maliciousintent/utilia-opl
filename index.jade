@@ -77,7 +77,7 @@ html
         img(src='Utilia-HR-Tools-and-Solutions-logo.jpg')
       .spacer-20
       .main
-        p.center Compila il modulo seguente per ricevere via e-mail i report.
+        p.center Compila il modulo seguente per ricevere via e-mail i tuoi report.
         .spacer-10
         form#utilia-form.pure-form.pure-form-stacked(method='POST', name='utilia-form', action='https://www.youform.me/api/form/b80098f7-70ab-4ea1-89d1-9bcf37c447c9')
           fieldset
@@ -92,13 +92,18 @@ html
 
             .spacer-10
 
+            label(for='settore') Settore Lavorativo
+            input#email(name='text', type='text', placeholder='', required)
+
+            .spacer-10
+
             label(for='email') Indirizzo e-mail
             input#email(name='email', type='text', placeholder='Indirizzo e-mail', required)
 
             .spacer-10
             label Tools
 
-            - var tools = [{'name': 'Aptitude', 'field': 'aptitude'}, {'name': 'Wave Focus Styles', 'field': 'wave-focus-styles'}, {'name': 'Wave Professional Styles', 'field': 'wave-professional-styles'}, {'name': 'Wave Work Strengths', 'field': 'wave-work-strengths'}, {'name': 'Flora', 'field': 'flora'}, {'name': 'DiSC', 'field': 'disc'}, {'name': 'MyDrive', 'field': 'mydrive'}, {'name': 'VALues', 'field': 'values'}, {'name': 'Utopia', 'field': 'utopia'}, {'name': 'HighLight', 'field': 'highlight'}, {'name': 'Feedback 360°', 'field': 'feedback-360'}, {'name': 'Performance 360°', 'field': 'performance-360'}, {'name': 'Job Profiler', 'field': 'job-profiler'}];
+            - var tools = [{'name': 'Aptitude', 'field': 'aptitude'}, {'name': 'Wave Focus Styles', 'field': 'wave-focus-styles'}, {'name': 'Wave Professional Styles', 'field': 'wave-professional-styles'}, {'name': 'Wave Work Strengths', 'field': 'wave-work-strengths'}, {'name': 'Flora', 'field': 'flora'}, {'name': 'DiSC', 'field': 'disc'}, {'name': 'MyDrive', 'field': 'mydrive'}, {'name': 'Valori AL Lavoro', 'field': 'values'}, {'name': 'Utopia', 'field': 'utopia'}, {'name': 'HighLight', 'field': 'highlight'}, {'name': 'Feedback 360°', 'field': 'feedback-360'}, {'name': 'Performance 360°', 'field': 'performance-360'}, {'name': 'Job Profiler', 'field': 'job-profiler'}];
 
             each tool in tools
               label.pure-checkbox(for='#{tool.field}')
